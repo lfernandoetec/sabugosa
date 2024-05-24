@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block conteudo %}
+    <h1>Lista de produtos</h1>
+
+    <ul>
+    {% for produto in object_list %}
+        <li>{{ produto.nome|capfirst }}: R${{ produto.preco }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

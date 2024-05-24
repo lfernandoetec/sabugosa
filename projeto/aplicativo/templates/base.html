@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabugosa Store</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+   <nav>
+    <ul>
+        <li class="nav">
+            <a href="{% url 'index' %}">Home | </a>
+        </li>
+        <li class="nav">
+            <a href="{% url 'sobre' %}">Sobre | </a>
+        </li>
+        <li class="nav">
+            <a href="{% url 'contato' %}">Contato</a>
+        </li>
+    </ul>
+   </nav>
+   {% block conteudo %}
+   
+   {% endblock %}
+</body>
+</html>
